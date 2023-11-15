@@ -19,6 +19,7 @@
   <div id="lon"></div>
   <div id="alt"></div>
   <div id="acu"></div>
+  <div id="speed"></div>
 </body>
 <script>
   function showPos(position) {
@@ -28,12 +29,14 @@
     lon = position.coords.longitude;
     alt = position.coords.altitude;
     acu = position.coords.accuracy;
+    speed = position.coords.speed;
 
     document.getElementById("now").innerText = "Date     : " + now;
     document.getElementById("lat").innerText = "Latitude : " + lat;
     document.getElementById("lon").innerText = "Longitude: " + lon;
     document.getElementById("alt").innerText = "Altitude : " + alt;
     document.getElementById("acu").innerText = "Accuracy : " + acu;
+    document.getElementById("speed").innerText = "Speed : " + speed;
   }
 
   window.addEventListener("load", (event) => {
